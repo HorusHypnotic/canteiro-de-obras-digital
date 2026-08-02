@@ -2,6 +2,8 @@
 
 Site institucional independente do portfólio pessoal de Eduardo Martins.
 
+O PDIC aparece em destaque com sua identidade pública **Market Compass**. Seu código está no repositório privado `HorusHypnotic/cabobanho`; o slug não é o nome do produto.
+
 ## Executar localmente
 
 ```powershell
