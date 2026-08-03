@@ -19,6 +19,15 @@
 .specific-pricing div{display:grid;gap:8px;padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .specific-pricing span{color:#aeb5b0;font-size:11px;font-weight:900;text-transform:uppercase}
 .specific-pricing strong{font-size:15px}
+.founder{background:#d9ddd8;color:var(--ink)}
+.founder-layout{display:grid;grid-template-columns:minmax(280px,.72fr) 1.28fr;gap:clamp(40px,8vw,110px);align-items:center}
+.founder-media{overflow:hidden;max-width:520px;aspect-ratio:4/5;border:1px solid var(--dark-line)}
+.founder-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.founder-copy h2{margin:0 0 24px;font-size:clamp(48px,7vw,92px);line-height:.92}
+.founder-lead{max-width:650px;margin:0 0 18px;font-size:clamp(20px,2.4vw,30px);line-height:1.25}
+.founder-copy>p:not(.kicker):not(.founder-lead){max-width:620px;color:#59615d;font-size:17px}
+.founder-copy .text-link{margin-top:20px;color:#164d48}
 @media(max-width:900px){.module-grid,.pricing-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.specific-pricing{grid-template-columns:1fr}}
+@media(max-width:900px){.founder-layout{grid-template-columns:1fr}.founder-media{width:min(100%,520px)}}
 @media(max-width:520px){.module-grid,.pricing-grid{grid-template-columns:1fr}.module-card,.price-card{min-height:0}}
