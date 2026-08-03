@@ -22,6 +22,8 @@
       <a href="#opera">Ecossistema</a>
       <a href="#produtos">Módulos</a>
       <a href="#investimento">Preços</a>
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#interesse">Lista prioritária</a>
       <a href="#evidencias">Evidências</a>
       <a href="#pesquisa">Pesquisa</a>
       <a href="#responsavel">Sobre</a>
@@ -158,8 +160,76 @@
       <p class="pricing-note reveal">Valores de referência sujeitos a ajuste conforme porte, complexidade, risco, quantidade de obras, módulos contratados e urgência. Protótipos e produtos em validação são oferecidos somente quando houver escopo e disponibilidade confirmados.</p>
     </section>
 
+    <section class="band diagnosis" id="diagnostico">
+      <div class="section-label"><span>05</span> Diagnóstico O.P.E.R.A.</div>
+      <div class="section-title reveal">
+        <p class="kicker">Análise inicial</p>
+        <h2>Descubra o nível de controle da sua obra.</h2>
+        <p>Responda aos cinco eixos do checklist. O resultado preliminar é calculado no seu navegador e não exige cadastro.</p>
+      </div>
+      <form class="diagnosis-form reveal" data-diagnosis-form>
+        <div class="diagnosis-context">
+          <label>Valor aproximado da obra <input name="valor_obra" type="text" inputmode="decimal" placeholder="Ex.: R$ 500.000"></label>
+          <label>Tipo de obra <select name="tipo_obra"><option value="">Selecione</option><option>Residencial</option><option>Comercial</option><option>Outro</option></select></label>
+          <label>Fase <select name="fase"><option value="">Selecione</option><option>Início</option><option>Meio</option><option>Final</option></select></label>
+          <label>Número de frentes <input name="frentes" type="number" min="1" max="99" placeholder="Ex.: 3"></label>
+        </div>
+        <div class="axis-grid">
+          <fieldset><legend>Controle de custo</legend><p>Considere orçamento, aderência, compras planejadas e emergenciais.</p><label><input type="radio" name="custo" value="0" required> Organizado</label><label><input type="radio" name="custo" value="1"> Médio</label><label><input type="radio" name="custo" value="2"> Bagunçado</label></fieldset>
+          <fieldset><legend>Controle de prazo</legend><p>Considere cronograma, atualização, atrasos e acompanhamento.</p><label><input type="radio" name="prazo" value="0" required> Controlado</label><label><input type="radio" name="prazo" value="1"> Médio</label><label><input type="radio" name="prazo" value="2"> Sem controle</label></fieldset>
+          <fieldset><legend>Execução</legend><p>Considere equipes, retrabalho, gargalos e quantidade de frentes.</p><label><input type="radio" name="execucao" value="0" required> Simples</label><label><input type="radio" name="execucao" value="1"> Média</label><label><input type="radio" name="execucao" value="2"> Complexa</label></fieldset>
+          <fieldset><legend>Controle geral</legend><p>Considere planilhas, atualização semanal, confiabilidade e decisões por intuição.</p><label><input type="radio" name="controle" value="0" required> Estruturado</label><label><input type="radio" name="controle" value="1"> Parcial</label><label><input type="radio" name="controle" value="2"> Inexistente</label></fieldset>
+          <fieldset><legend>Risco da obra</legend><p>Considere estouro de custo, atraso relevante, insegurança e falta de informação.</p><label><input type="radio" name="risco" value="0" required> Baixo</label><label><input type="radio" name="risco" value="1"> Médio</label><label><input type="radio" name="risco" value="2"> Alto</label></fieldset>
+        </div>
+        <button class="button primary" type="submit">Calcular diagnóstico <span>→</span></button>
+      </form>
+      <div class="diagnosis-result" data-diagnosis-result hidden aria-live="polite">
+        <div><span>Pontuação</span><strong data-diagnosis-score>0 / 10</strong></div>
+        <div><span>Nível de controle</span><strong data-diagnosis-level>—</strong></div>
+        <div><span>Implantação indicada</span><strong data-diagnosis-setup>—</strong></div>
+        <div><span>Acompanhamento indicado</span><strong data-diagnosis-monthly>—</strong></div>
+        <p data-diagnosis-copy></p>
+        <button class="button diagnosis-cta" type="button" data-request-diagnosis>Solicitar diagnóstico detalhado <span>→</span></button>
+      </div>
+      <p class="diagnosis-disclaimer">Estimativa preliminar baseada no Checklist de Análise Inicial O.P.E.R.A. Não constitui proposta comercial. Muitas frentes, urgência e demanda de acompanhamento podem alterar o valor.</p>
+    </section>
+
+    <section class="band interest" id="interesse">
+      <div class="section-label"><span>06</span> Manifestação de interesse</div>
+      <div class="interest-intro reveal">
+        <div><p class="kicker">Sem pagamento nesta etapa</p><h2>Escolha como deseja avançar.</h2><p>Você pode solicitar uma proposta, reservar interesse ou entrar na lista prioritária. O envio não representa compra concluída, reserva de preço ou garantia de disponibilidade.</p></div>
+        <div class="metrics" aria-label="Indicadores do portfólio">
+          <div><strong data-metric="interessados_total">—</strong><span>interessados</span></div>
+          <div><strong data-metric="diagnosticos_solicitados">—</strong><span>diagnósticos</span></div>
+          <div><strong data-metric="propostas_solicitadas">—</strong><span>propostas</span></div>
+          <div><strong data-metric="empresas_interessadas">—</strong><span>empresas</span></div>
+        </div>
+      </div>
+      <form class="interest-form reveal" data-interest-form>
+        <fieldset class="product-selector"><legend>Produtos de interesse</legend>
+          <div class="product-options">
+            <label><input type="checkbox" name="produtos" value="diagnostico-opera"> Diagnóstico O.P.E.R.A.</label><label><input type="checkbox" name="produtos" value="copiloto-obras"> Copiloto de Obras</label><label><input type="checkbox" name="produtos" value="opera-atlas"> O.P.E.R.A. Atlas</label><label><input type="checkbox" name="produtos" value="opera-control"> O.P.E.R.A. Control</label><label><input type="checkbox" name="produtos" value="pedidos-cod"> Pedidos COD</label><label><input type="checkbox" name="produtos" value="reo"> REO</label><label><input type="checkbox" name="produtos" value="stockflow"> StockFlow</label><label><input type="checkbox" name="produtos" value="direcione"> Direcione</label><label><input type="checkbox" name="produtos" value="smart-cotacoes"> Smart Cotações</label><label><input type="checkbox" name="produtos" value="gestao-os"> Gestão de Ordem de Serviço</label><label><input type="checkbox" name="produtos" value="pdic"> PDIC</label><label><input type="checkbox" name="produtos" value="canteiro-crm"> Canteiro CRM</label>
+          </div>
+        </fieldset>
+        <div class="form-grid">
+          <label>Como deseja avançar? <select name="modalidade" required><option value="">Selecione</option><option value="interesse">Reservar interesse</option><option value="solicitacao_diagnostico">Solicitar diagnóstico</option><option value="solicitacao_proposta">Solicitar proposta</option><option value="lista_prioritaria">Entrar na lista prioritária</option></select></label>
+          <label>Nome <input name="nome" required maxlength="100" autocomplete="name"></label>
+          <label>E-mail <input name="email" type="email" required maxlength="255" autocomplete="email"></label>
+          <label>Telefone <input name="telefone" type="tel" maxlength="20" autocomplete="tel"></label>
+          <label>Empresa <input name="empresa" maxlength="140" autocomplete="organization"></label>
+          <label>Cidade <input name="cidade" maxlength="100" autocomplete="address-level2"></label>
+          <label>UF <input name="uf" maxlength="2" pattern="[A-Za-z]{2}" autocomplete="address-level1"></label>
+          <label class="message-field">Mensagem <textarea name="mensagem" maxlength="1000" rows="4" placeholder="Conte brevemente o que você precisa."></textarea></label>
+        </div>
+        <label class="consent"><input type="checkbox" name="consentimento" required> Autorizo o uso destes dados para receber contato sobre o diagnóstico, proposta ou produtos selecionados.</label>
+        <div data-turnstile></div>
+        <button class="button primary" type="submit" data-interest-submit disabled>Enviar manifestação <span>→</span></button>
+        <p class="form-status" data-interest-status role="status">O formulário será habilitado após a verificação de segurança.</p>
+      </form>
+    </section>
+
     <section class="band evidence" id="evidencias">
-      <div class="section-label"><span>05</span> Evidência disponível</div>
+      <div class="section-label"><span>07</span> Evidência disponível</div>
       <div class="evidence-layout">
         <div class="evidence-media reveal"><img src="assets/atlas-interface.png" alt="Relatórios e controles do Atlas em operação" loading="lazy"></div>
         <div class="evidence-copy reveal">
@@ -177,7 +247,7 @@
     </section>
 
     <section class="band research" id="pesquisa">
-      <div class="section-label"><span>06</span> Pesquisa</div>
+      <div class="section-label"><span>08</span> Pesquisa</div>
       <div class="research-grid">
         <div class="section-title reveal">
           <p class="kicker">Informodinâmica Aplicada</p>
@@ -192,7 +262,7 @@
     </section>
 
     <section class="band founder" id="responsavel">
-      <div class="section-label"><span>07</span> Responsável</div>
+      <div class="section-label"><span>09</span> Responsável</div>
       <div class="founder-layout">
         <div class="founder-media reveal">
           <img src="assets/eduardo-martins.jpeg" alt="Retrato de Eduardo Martins" loading="lazy">
@@ -217,6 +287,7 @@
   </main>
 
   <footer><span>© <span data-year></span> Canteiro de Obras Digital</span><span>Pesquisa responsável: Eduardo Martins</span><a href="https://unsplash.com/photos/yellow-and-black-construction-crane-near-building-under-construction-during-daytime-P18invM_AGQ" target="_blank" rel="noopener noreferrer">Foto: Ricardo Gomez Angel</a><a href="#inicio">Voltar ao início ↑</a></footer>
+  <script src="js/portfolio-config.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
