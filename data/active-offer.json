@@ -1,0 +1,15 @@
+{
+  "snapshot_of": "informodinamica-canonical/commercial/offers/diagnostico-opera-v1.json",
+  "snapshot_version": "1.0.0",
+  "offers": [
+    {
+      "offer_id": "OFFER-OPERA-DIAGNOSTICO-V1",
+      "offer_version": "1.0.0",
+      "status": "ACTIVE",
+      "order_enabled": false,
+      "public_name": "Diagnóstico O.P.E.R.A. V1",
+      "price": { "amount": 197, "currency": "BRL" },
+      "cta": { "label": "Quero conversar sobre o diagnóstico", "future_action": "CREATE_ORDER", "current_behavior": "AUXILIARY_CONTACT" }
+    }
+  ]
+}
