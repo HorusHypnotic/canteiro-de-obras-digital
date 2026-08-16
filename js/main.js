@@ -70,13 +70,13 @@ diagnosisForm?.addEventListener('submit', (event) => {
 });
 
 document.querySelector('[data-request-diagnosis]')?.addEventListener('click', () => {
-  const product = document.querySelector('input[name="produtos"][value="diagnostico-opera"]');
-  const mode = document.querySelector('select[name="modalidade"]');
-  if (product) product.checked = true;
-  if (mode) mode.value = 'solicitacao_diagnostico';
-  document.querySelector('#interesse')?.scrollIntoView({ behavior: 'smooth' });
+  window.open('https://wa.me/5594992193129?text=Ol%C3%A1%2C%20fiz%20o%20checklist%20de%20diagn%C3%B3stico%20na%20p%C3%A1gina%20COD%20e%20quero%20solicitar%20meu%20diagn%C3%B3stico%20detalhado%20de%20R%24197.', '_blank', 'noopener');
 });
 
+// COD MONEY PATH V0 (16/08/2026): formulário de manifestação removido da página;
+// canal de contato agora é conversa direta (WhatsApp + e-mail). Blocos abaixo
+// permanecem no código como histórico versionado e serão reativados SOMENTE
+// se uma infraestrutura real (chave Turnstile + endpoint) existir.
 const interestForm = document.querySelector('[data-interest-form]');
 const interestStatus = document.querySelector('[data-interest-status]');
 const interestSubmit = document.querySelector('[data-interest-submit]');

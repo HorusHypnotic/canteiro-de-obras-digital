@@ -50,6 +50,22 @@
 @media(max-width:900px){.axis-grid{grid-template-columns:1fr 1fr}.diagnosis-context,.interest-intro{grid-template-columns:1fr}.product-options{grid-template-columns:1fr 1fr}.interest-form .form-grid{grid-template-columns:1fr 1fr}.diagnosis-result{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.module-grid,.pricing-grid,.axis-grid,.product-options,.interest-form .form-grid,.diagnosis-result{grid-template-columns:1fr}.module-card,.price-card{min-height:0}.diagnosis-result>p,.diagnosis-cta{grid-column:1}.metrics{grid-template-columns:1fr 1fr}}
 
+/* COD MONEY PATH V0 — direct conversation path */
+.hero-offer{max-width:760px;margin-top:34px;padding:26px;border:1px solid var(--line);background:rgba(16,19,18,.62);backdrop-filter:blur(6px)}
+.hero-offer-problem{margin:0 0 14px;color:#e8e5d8;font-size:clamp(17px,1.9vw,22px);line-height:1.35}
+.hero-offer-name{margin:0 0 10px;font-size:clamp(22px,2.6vw,30px)}
+.hero-offer-name strong{color:var(--lime)}
+.hero-offer-name span{color:var(--cyan);font-weight:800}
+.hero-offer-lead{margin:0 0 6px;color:#c7ccc8;font-size:16px;line-height:1.4}
+.hero-offer-note{margin:12px 0 0;color:#aeb5b0;font-size:13px}
+.hero-offer .hero-actions{margin-top:18px}
+.offer-channel{margin:12px 0 0;color:#a04416;font-size:14px;font-weight:800}
+.interest-direct{padding:30px;border:1px solid var(--lime);background:var(--ink)}
+.interest-direct>p:first-child{margin:0 0 22px;color:#c7ccc8;max-width:720px}
+.interest-direct-actions{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){.hero-offer{margin-bottom:40px}}
+@media(max-width:520px){.interest-direct-actions{flex-direction:column}.interest-direct-actions .button{width:100%}}
+
 /* MM-01 — one active offer */
 .active-offer{background:#f0f1ed;color:var(--ink)}
 .active-offer .kicker{color:#a04416}
