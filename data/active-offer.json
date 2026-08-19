@@ -1,15 +1,24 @@
 {
-  "snapshot_of": "informodinamica-canonical/commercial/offers/diagnostico-opera-v1.json",
-  "snapshot_version": "1.0.0",
+  "snapshot_of": "informodinamica-canonical/commercial/offers/diagnostico-operacional-v2.json",
+  "snapshot_version": "2.0.0",
   "offers": [
     {
-      "offer_id": "OFFER-OPERA-DIAGNOSTICO-V1",
-      "offer_version": "1.0.0",
+      "offer_id": "OFFER-DIAGNOSTICO-OPERACIONAL-V2",
+      "offer_version": "2.0.0",
       "status": "ACTIVE",
       "order_enabled": false,
-      "public_name": "Diagnóstico O.P.E.R.A. V1",
+      "public_name": "Diagnóstico Operacional de Obra",
+      "price": { "amount": 1297, "currency": "BRL" },
+      "cta": { "label": "Quero solicitar um Diagnóstico Operacional", "future_action": "CREATE_ORDER", "current_behavior": "AUXILIARY_CONTACT" }
+    },
+    {
+      "offer_id": "OFFER-OPERA-TRIAGEM-V1",
+      "offer_version": "1.0.0",
+      "status": "TRIAGE",
+      "order_enabled": false,
+      "public_name": "Triagem Diagnóstica",
       "price": { "amount": 197, "currency": "BRL" },
-      "cta": { "label": "Quero conversar sobre o diagnóstico", "future_action": "CREATE_ORDER", "current_behavior": "AUXILIARY_CONTACT" }
+      "cta": { "label": "Conversar sobre a triagem", "future_action": "CREATE_ORDER", "current_behavior": "AUXILIARY_CONTACT" }
     }
   ]
 }

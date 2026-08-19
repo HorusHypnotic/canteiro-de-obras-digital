@@ -70,7 +70,7 @@ diagnosisForm?.addEventListener('submit', (event) => {
 });
 
 document.querySelector('[data-request-diagnosis]')?.addEventListener('click', () => {
-  window.open('https://wa.me/5594992193129?text=Ol%C3%A1%2C%20fiz%20o%20checklist%20de%20diagn%C3%B3stico%20na%20p%C3%A1gina%20COD%20e%20quero%20solicitar%20meu%20diagn%C3%B3stico%20detalhado%20de%20R%24197.', '_blank', 'noopener');
+  window.open('https://wa.me/5594992193129?text=Ol%C3%A1%2C%20fiz%20o%20autoteste%20de%20diagn%C3%B3stico%20na%20p%C3%A1gina%20COD%20e%20quero%20solicitar%20o%20Diagn%C3%B3stico%20Operacional%20de%20Obra.', '_blank', 'noopener');
 });
 
 // COD MONEY PATH V0 (16/08/2026): formulário de manifestação removido da página;
@@ -81,19 +81,10 @@ const interestForm = document.querySelector('[data-interest-form]');
 const interestStatus = document.querySelector('[data-interest-status]');
 const interestSubmit = document.querySelector('[data-interest-submit]');
 
+// 19/08/2026 Missão P0: fetch do endpoint morto removido do caminho de carregamento;
+// indicadores da página histórica permanecem no markup apenas como registro versionado.
 const loadMetrics = async () => {
   if (!portfolioConfig.apiUrl) return;
-  try {
-    const response = await fetch(portfolioConfig.apiUrl, { headers: { Accept: 'application/json' } });
-    if (!response.ok) return;
-    const { metrics = {} } = await response.json();
-    document.querySelectorAll('[data-metric]').forEach((item) => {
-      const value = Number(metrics[item.dataset.metric]);
-      item.textContent = Number.isFinite(value) ? value.toLocaleString('pt-BR') : '0';
-    });
-  } catch {
-    // Indicadores indisponíveis não impedem a leitura da página.
-  }
 };
 loadMetrics();
 

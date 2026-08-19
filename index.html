@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Canteiro de Obras Digital: produtos para registrar, preservar e analisar a realidade operacional da construção.">
+  <meta name="description" content="Diagnóstico Operacional de Obra: investigação estruturada da sua obra com raio-x operacional, desvios priorizados, causas sustentadas por evidência e plano de ação — por Eduardo Martins.">
   <meta name="theme-color" content="#101312">
-  <title>Canteiro de Obras Digital | Ecossistema O.P.E.R.A.</title>
+  <title>Canteiro de Obras Digital | Diagnóstico Operacional de Obra</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pdic.css">
   <style>body{overflow-x:hidden}.hero-copy>p{overflow-wrap:anywhere}@media(max-width:900px){.menu{flex:none;position:relative;z-index:2}}</style>
@@ -19,16 +19,14 @@
     </a>
     <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
     <nav data-nav aria-label="Navegação principal">
-      <a href="#opera">Ecossistema</a>
-      <a href="#produtos">Módulos</a>
-      <a href="#oferta-ativa">Contrate</a>
-      <a href="#diagnostico">Diagnóstico</a>
-      <a href="#interesse">Lista prioritária</a>
+      <a href="#oferta-ativa">Diagnóstico</a>
+      <a href="#triagem">Triagem</a>
+      <a href="#diagnostico">Autoteste</a>
+      <a href="#infraestrutura">Infraestrutura</a>
       <a href="#evidencias">Evidências</a>
-      <a href="#pesquisa">Pesquisa</a>
       <a href="#responsavel">Sobre</a>
     </nav>
-    <a class="header-cta" href="#contato">Contato</a>
+    <a class="header-cta" href="#oferta-ativa">Contrate</a>
   </header>
 
   <main id="conteudo">
@@ -40,12 +38,12 @@
         <h1>A obra muda.<br>A informação precisa acompanhar.</h1>
         <p>Produtos para registrar o que acontece, preservar a memória operacional e tornar desvios investigáveis antes que virem apenas explicações.</p>
 
-        <div class="hero-offer" aria-label="Oferta ativa: Diagnóstico O.P.E.R.A. por R$ 197">
-          <p class="hero-offer-problem">Espera, retrabalho e compra emergencial custam dinheiro antes de aparecerem no fechamento — e quase nunca têm uma causa registrada.</p>
-          <p class="hero-offer-name"><strong>Diagnóstico O.P.E.R.A.</strong> <span>— R$ 197, preço fixo</span></p>
-          <p class="hero-offer-lead">Você envia o contexto da obra. Recebe uma análise estruturada em PDF com achados, lacunas e prioridades — o que está sob controle, o que não está, e por quê. Não é laudo e não promete economia: é uma leitura honesta e rastreável do que você informar.</p>
+        <div class="hero-offer" aria-label="Oferta ativa: Diagnóstico Operacional de Obra por R$ 1.297">
+          <p class="hero-offer-problem">Minha obra está perdendo dinheiro, prazo ou controle — e eu não consigo enxergar exatamente onde.</p>
+          <p class="hero-offer-name"><strong>Diagnóstico Operacional de Obra</strong> <span>— R$ 1.297, preço fixo</span></p>
+          <p class="hero-offer-lead">Investigação estruturada da sua obra. Você recebe o raio-x operacional, os desvios priorizados, as causas sustentadas por evidência e um plano de ação com a próxima decisão recomendada. Não é laudo e não promete economia: é uma leitura honesta, rastreável e delimitada do que seus dados permitirem.</p>
           <div class="hero-actions">
-            <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20vi%20o%20Diagn%C3%B3stico%20O.P.E.R.A.%20de%20R%24197%20e%20quero%20entender%20como%20funciona." target="_blank" rel="noopener noreferrer" data-diagnostico-cta>Quero solicitar meu diagnóstico <span>→</span></a>
+            <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20Diagn%C3%B3stico%20Operacional%20de%20Obra%20de%20R%241.297." target="_blank" rel="noopener noreferrer" data-diagnostico-cta>Quero solicitar um Diagnóstico Operacional <span>→</span></a>
             <a class="button ghost" href="#oferta-ativa">Ver escopo e limites <span>↓</span></a>
           </div>
           <p class="hero-offer-note">Sem pagamento online. A conversa define o escopo antes de qualquer compromisso.</p>
@@ -72,8 +70,9 @@
       </div>
     </section>
 
-    <section class="band opera" id="opera">
-      <div class="section-label"><span>02</span> Núcleo O.P.E.R.A.</div>
+    <!-- 19/08/2026 Missão P0: núcleo reclassificado como infraestrutura (ver #infraestrutura); seção mantida no HTML como registro versionado e oculta por .hidden-temporarily. Não apagar. -->
+    <section class="band opera hidden-temporarily" id="opera">
+      <div class="section-label"><span>02</span> Núcleo O.P.E.R.A. (histórico)</div>
       <div class="section-title reveal">
         <p class="kicker">Três responsabilidades</p>
         <h2>Registrar. Preservar. Diagnosticar.</h2>
@@ -105,7 +104,8 @@
       </ol>
     </section>
 
-    <section class="band catalog" id="produtos">
+    <!-- 19/08/2026 Missão P0: catálogo e PDIC reposicionados; detalhes disponíveis na conversa. Seção oculta por .hidden-temporarily (não apagada). -->
+    <section class="band catalog hidden-temporarily" id="produtos">
       <div class="section-label"><span>03</span> Arquitetura de produtos</div>
       <div class="section-title reveal">
         <p class="kicker">Portfólio conectado</p>
@@ -150,7 +150,8 @@
       </div>
     </section>
 
-    <section class="band pricing" id="investimento">
+    <!-- 19/08/2026 Missão P0: régua de investimento resumida na nova seção #infraestrutura; histórico completo mantido oculto por .hidden-temporarily. -->
+    <section class="band pricing hidden-temporarily" id="investimento">
       <div class="section-label"><span>04</span> Investimento</div>
       <div class="section-title reveal"><p class="kicker">Régua comercial</p><h2>Comece pelo diagnóstico. Evolua conforme a obra.</h2><p>Valores de referência para a contratação inicial. Licenciamento, operação de módulos específicos e ecossistema completo são dimensionados sob proposta.</p></div>
       <div class="pricing-grid">
@@ -167,26 +168,26 @@
       <p class="pricing-note reveal">Valores de referência sujeitos a ajuste conforme porte, complexidade, risco, quantidade de obras, módulos contratados e urgência. Protótipos e produtos em validação são oferecidos somente quando houver escopo e disponibilidade confirmados.</p>
     </section>
 
-    <section class="band active-offer" id="oferta-ativa" data-offer-id="OFFER-OPERA-DIAGNOSTICO-V1" data-offer-version="1.0.0" data-offer-status="ACTIVE">
+    <section class="band active-offer" id="oferta-ativa" data-offer-id="OFFER-DIAGNOSTICO-OPERACIONAL-V2" data-offer-version="2.0.0" data-offer-status="ACTIVE">
       <div class="section-label"><span>Oferta ativa</span> Contrate</div>
       <div class="offer-hero reveal">
         <div>
-          <p class="kicker">Uma oferta. Escopo explícito.</p>
-          <h2>Diagnóstico O.P.E.R.A. V1</h2>
-          <p class="offer-lead">Uma leitura inicial e rastreável do contexto operacional que você informar — com fatos, relatos, inferências, lacunas e incertezas claramente separados.</p>
+          <p class="kicker">Oferta principal. Escopo explícito.</p>
+          <h2>Diagnóstico Operacional de Obra</h2>
+          <p class="offer-lead">Uma investigação estruturada da operação da sua obra — com fatos, inferências, lacunas e incertezas claramente separados, sustentados por evidência rastreável.</p>
         </div>
-        <div class="offer-price" aria-label="Preço fixo de cento e noventa e sete reais">
+        <div class="offer-price" aria-label="Preço fixo de mil duzentos e noventa e sete reais">
           <span>Preço fixo</span>
-          <strong>R$ 197</strong>
+          <strong>R$ 1.297</strong>
           <small>Sem cobrança online nesta etapa</small>
         </div>
       </div>
 
       <div class="offer-grid reveal">
-        <article><span>Para quem é</span><p>Responsáveis por empresa, obra ou frente operacional que precisam organizar o contexto e decidir próximos passos.</p></article>
-        <article><span>Você envia</span><p>Contexto da obra, problema principal, período analisado, finalidade da análise e origem das informações — pela própria conversa do WhatsApp.</p></article>
-        <article><span>Você recebe</span><p>Relatório em PDF com escopo, fontes, achados sustentados, lacunas, prioridades qualitativas, recomendações e limites da leitura.</p></article>
-        <article><span>Como combinamos</span><p>Pela conversa direta: confirmamos o escopo antes de qualquer compromisso, organizamos a evidência e entregamos por canal privado combinado.</p></article>
+        <article><span>Para quem é</span><p>Responsáveis por obra, construtora ou frente operacional que sentem perda de dinheiro, prazo ou controle e não conseguem enxergar exatamente onde.</p></article>
+        <article><span>Você envia</span><p>Informações disponíveis da obra, conversa inicial e evidências operacionais existentes — orçamento, cronograma, planilhas, fotos e registros.</p></article>
+        <article><span>Você recebe</span><p>Raio-x operacional, principais desvios, problemas priorizados, causas prováveis sustentadas por evidência, riscos identificados, plano de ação e a próxima decisão recomendada.</p></article>
+        <article><span>Como combinamos</span><p>Pela conversa direta no WhatsApp: confirmamos o escopo antes de qualquer compromisso e organizamos a evidência do que for possível medir.</p></article>
         <article><span>Cobrança</span><p>Não há pagamento online. A cobrança só acontece depois do escopo confirmado, combinada na conversa — e o diagnóstico pode concluir que os dados são insuficientes.</p></article>
       </div>
 
@@ -196,26 +197,52 @@
           <ul>
             <li>Não é laudo, auditoria, fiscalização ou parecer técnico, contábil ou jurídico.</li>
             <li>Não inclui visita, implementação ou acompanhamento.</li>
-            <li>Não promete economia, redução de perdas ou desempenho.</li>
+            <li>Não promete economia antes de medi-la.</li>
             <li>Pode concluir que os dados são insuficientes, sem inventar uma classificação.</li>
           </ul>
         </div>
         <div class="offer-next" id="iniciar-diagnostico">
           <span>Próxima etapa</span>
           <h3>Solicite o início pelo canal atual.</h3>
-          <p>A criação de pedido e o pagamento online ainda não estão habilitados. O contato serve apenas para combinar escopo, prazo e canal privado antes de qualquer compromisso.</p>
-          <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20vi%20o%20Diagn%C3%B3stico%20O.P.E.R.A.%20de%20R%24197%20e%20quero%20entender%20como%20funciona." target="_blank" rel="noopener noreferrer" data-active-offer-cta data-future-action="CREATE_ORDER">Quero conversar sobre o diagnóstico <span>→</span></a>
+          <p>A criação de pedido e o pagamento online ainda não estão habilitados. O contato serve para combinar escopo, prazo e canal privado antes de qualquer compromisso.</p>
+          <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20Diagn%C3%B3stico%20Operacional%20de%20Obra%20de%20R%241.297." target="_blank" rel="noopener noreferrer" data-active-offer-cta data-future-action="CREATE_ORDER">Quero solicitar um Diagnóstico Operacional <span>→</span></a>
           <p class="offer-channel">Conversa direta com Eduardo Martins · <a class="text-link" href="mailto:canteirodeobrasdigital@gmail.com">canteirodeobrasdigital@gmail.com</a></p>
         </div>
       </div>
     </section>
 
-    <section class="band diagnosis" id="diagnostico">
-      <div class="section-label"><span>05</span> Diagnóstico O.P.E.R.A.</div>
+    <section class="band triage" id="triagem">
+      <div class="section-label"><span>Triagem</span> Entrada de menor custo</div>
+      <div class="triage-copy reveal">
+        <p class="kicker">Antes do diagnóstico completo</p>
+        <h2>Triagem Diagnóstica — R$ 197</h2>
+        <p>Uma leitura inicial e rastreável do contexto operacional que você informar, entregue em PDF com achados, lacunas e prioridades. <strong>Não é o Diagnóstico Operacional completo</strong>: é uma triagem para decidir se a investigação completa vale a pena para o seu caso.</p>
+        <a class="button ghost" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20entender%20a%20Triagem%20Diagn%C3%B3stica%20de%20R%24197." target="_blank" rel="noopener noreferrer">Conversar sobre a triagem <span>→</span></a>
+        <p class="triage-note">Mesmos limites da oferta principal: não é laudo, não inclui visita e pode concluir que os dados são insuficientes.</p>
+      </div>
+    </section>
+
+    <section class="band infrastructure" id="infraestrutura">
+      <div class="section-label"><span>05</span> Infraestrutura</div>
       <div class="section-title reveal">
-        <p class="kicker">Análise inicial</p>
+        <p class="kicker">Capacidades disponíveis</p>
+        <h2>Instrumentos internos — disponíveis quando o diagnóstico indicar necessidade.</h2>
+        <p>O ecossistema O.P.E.R.A. (Atlas, Control, Copiloto, Direcione, REO, Smart Cotações, PDIC e módulos experimentais) é a infraestrutura e as capacidades disponíveis para etapas seguintes. Módulos podem estar em calibração ou indisponíveis — o diagnóstico define o que faz sentido usar, se fizer.</p>
+      </div>
+      <div class="module-grid">
+        <article class="module-card"><div class="module-number">Módulo 0</div><h3>Núcleo O.P.E.R.A.</h3><ul><li>Diagnóstico</li><li>Copiloto de Obras</li><li>O.P.E.R.A. Atlas</li><li>O.P.E.R.A. Control</li></ul></article>
+        <article class="module-card"><div class="module-number">Módulo 1</div><h3>Registro e recursos</h3><ul><li>Pedidos COD</li><li>REO</li><li>StockFlow</li></ul></article>
+        <article class="module-card"><div class="module-number">Módulo 2</div><h3>Execução e decisão</h3><ul><li>Direcione</li><li>Smart Cotações</li><li>Gestão de OS</li></ul></article>
+        <article class="module-card"><div class="module-number">Módulo 3</div><h3>Integração e relacionamento</h3><ul><li>PDIC</li><li>Canteiro CRM</li></ul></article>
+      </div>
+    </section>
+
+    <section class="band diagnosis" id="diagnostico">
+      <div class="section-label"><span>06</span> Autoteste preliminar</div>
+      <div class="section-title reveal">
+        <p class="kicker">Gratuito e sem cadastro</p>
         <h2>Descubra o nível de controle da sua obra.</h2>
-        <p>Responda aos cinco eixos do checklist. O resultado preliminar é calculado no seu navegador e não exige cadastro.</p>
+        <p>Responda aos cinco eixos do checklist. O resultado preliminar é calculado no seu navegador e serve como ponto de partida para a conversa.</p>
       </div>
       <form class="diagnosis-form reveal" data-diagnosis-form>
         <div class="diagnosis-context">
@@ -244,10 +271,13 @@
       <p class="diagnosis-disclaimer">Estimativa preliminar baseada no Checklist de Análise Inicial O.P.E.R.A. Não constitui proposta comercial. Muitas frentes, urgência e demanda de acompanhamento podem alterar o valor.</p>
     </section>
 
-    <section class="band interest" id="interesse">
+    <!-- 19/08/2026 Missão P0: canal direto substitui esta seção (mantida oculta por .hidden-temporarily; não apagada). -->
+    <section class="band interest hidden-temporarily" id="interesse">
       <div class="section-label"><span>06</span> Manifestação de interesse</div>
-      <div class="interest-intro reveal">
+      <!-- 19/08/2026 Missão P0: número de seção mantido no registro histórico oculto. -->
+        <div class="interest-intro reveal">
         <div><p class="kicker">Sem pagamento nesta etapa</p><h2>Escolha como deseja avançar.</h2><p>Você pode solicitar uma proposta, reservar interesse ou entrar na lista prioritária. O envio não representa compra concluída, reserva de preço ou garantia de disponibilidade.</p></div>
+        <!-- 19/08/2026 Missão P0: seção oculta (histórico); canal ativo é a conversa direta. -->
         <div class="metrics" aria-label="Indicadores do portfólio">
           <div><strong data-metric="interessados_total">—</strong><span>interessados</span></div>
           <div><strong data-metric="diagnosticos_solicitados">—</strong><span>diagnósticos</span></div>
@@ -266,7 +296,8 @@
     </section>
 
     <section class="band evidence" id="evidencias">
-      <div class="section-label"><span>07</span> Evidência disponível</div>
+      <div class="section-label"><span>08</span> Evidência disponível</div>
+      <!-- 19/08/2026 Missão P0: seção reposicionada após Autoteste; número mantido para evitar reescrita de estilo. -->
       <div class="evidence-layout">
         <div class="evidence-media reveal"><img src="assets/atlas-interface.png" alt="Relatórios e controles do Atlas em operação" loading="lazy"></div>
         <div class="evidence-copy reveal">
@@ -283,8 +314,9 @@
       </div>
     </section>
 
-    <section class="band research" id="pesquisa">
-      <div class="section-label"><span>08</span> Pesquisa</div>
+    <!-- 19/08/2026 Missão P0: pesquisa mantida como registro institucional; seção oculta por .hidden-temporarily no caminho comercial. -->
+    <section class="band research hidden-temporarily" id="pesquisa">
+      <div class="section-label"><span>09</span> Pesquisa</div>
       <div class="research-grid">
         <div class="section-title reveal">
           <p class="kicker">Informodinâmica Aplicada</p>
@@ -299,7 +331,8 @@
     </section>
 
     <section class="band founder" id="responsavel">
-      <div class="section-label"><span>09</span> Responsável</div>
+      <div class="section-label"><span>10</span> Responsável</div>
+      <!-- 19/08/2026 Missão P0: número de seção mantido. -->
       <div class="founder-layout">
         <div class="founder-media reveal">
           <img src="assets/eduardo-martins.jpeg" alt="Retrato de Eduardo Martins" loading="lazy">
@@ -319,7 +352,7 @@
         <p class="kicker">Canteiro de Obras Digital</p>
         <h2>Vamos entender primeiro o que sua operação precisa preservar.</h2>
       </div>
-      <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20vi%20o%20Diagn%C3%B3stico%20O.P.E.R.A.%20de%20R%24197%20e%20quero%20entender%20como%20funciona." target="_blank" rel="noopener noreferrer" data-diagnostico-cta>Conversar pelo WhatsApp <span>→</span></a>
+      <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20Diagn%C3%B3stico%20Operacional%20de%20Obra." target="_blank" rel="noopener noreferrer" data-diagnostico-cta>Conversar pelo WhatsApp <span>→</span></a>
       <a class="text-link" href="mailto:canteirodeobrasdigital@gmail.com">canteirodeobrasdigital@gmail.com</a>
       <a class="text-link" href="https://www.instagram.com/canteirodeobrasdigital/" target="_blank" rel="noopener noreferrer">@canteirodeobrasdigital <span>↗</span></a>
     </section>

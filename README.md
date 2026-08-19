@@ -19,3 +19,6 @@ Capacidades, resultados e estágios de produto devem permanecer rastreáveis à 
 ## Crédito visual
 
 Fotografia do hero por [Ricardo Gomez Angel](https://unsplash.com/photos/yellow-and-black-construction-crane-near-building-under-construction-during-daytime-P18invM_AGQ), via Unsplash.
+
+## Diário
+Acompanhe o registro operacional append-only do projeto em `DIARIO.md`.

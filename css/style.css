@@ -86,3 +86,19 @@
 .legacy-form-warning{padding:18px;border:1px solid #8d5d37;background:#2b211a;color:#f3d8c2}
 @media(max-width:900px){.offer-hero,.offer-boundaries{grid-template-columns:1fr}.offer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.offer-grid{grid-template-columns:1fr}.offer-grid article{min-height:0}.offer-next .button{width:100%}}
+
+/* 19/08/2026 Missão P0 — reclassificação: oferta principal é o Diagnóstico Operacional; seções históricas mantidas como registro versionado e ocultas por .hidden-temporarily */
+.hidden-temporarily{display:none}
+.triage{background:#151918}
+.triage-copy{max-width:860px}
+.triage-copy h2{margin:14px 0 22px;font-size:clamp(34px,5vw,56px);line-height:.98}
+.triage-copy p:not(.kicker){color:#c7ccc8;font-size:clamp(18px,2vw,24px)}
+.triage-note{margin:18px 0 0;font-size:14px;color:#aeb5b0}
+.triage .button{margin-top:24px}
+@media(max-width:520px){.triage .button{width:100%}}
+.infrastructure{background:#d9ddd8;color:var(--ink)}
+.infrastructure .kicker{color:#a04416}
+.infrastructure .section-title>p:last-child{color:#59615c}
+.infrastructure .module-grid{border-top:1px solid var(--dark-line);border-left:1px solid var(--dark-line)}
+@media(max-width:900px){.infrastructure .module-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.infrastructure .module-grid{grid-template-columns:1fr}}

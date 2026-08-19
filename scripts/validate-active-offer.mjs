@@ -10,13 +10,17 @@ if (active.length !== 1) failures.push(`expected 1 ACTIVE offer, found ${active.
 const offer = active[0];
 if (!offer) failures.push('ACTIVE offer missing');
 if (offer) {
-  if (offer.price.amount !== 197 || offer.price.currency !== 'BRL') failures.push('price is not BRL 197');
+  if (offer.price.amount !== 1297 || offer.price.currency !== 'BRL') failures.push('price is not BRL 1297');
   if (offer.order_enabled !== false) failures.push('order must remain disabled in MM-01');
-  for (const value of [offer.offer_id, offer.offer_version, offer.public_name, 'R$ 197', offer.cta.label]) {
+  for (const value of [offer.offer_id, offer.offer_version, offer.public_name, 'R$ 1.297', offer.cta.label]) {
     if (!html.includes(value)) failures.push(`public HTML does not contain: ${value}`);
   }
+  if (!html.includes('Triagem Diagnóstica') || !html.includes('R$ 197')) failures.push('triage section R$ 197 missing from public HTML');
+  for (const other of contract.offers.filter((o) => o !== offer)) {
+    if (other.status !== 'TRIAGE') failures.push(`unexpected non-ACTIVE offer status: ${other.status}`);
+  }
 }
-for (const required of ['Para quem é', 'Você fornece', 'Você recebe', 'Como funciona', 'Limites claros', 'data-future-action="CREATE_ORDER"']) {
+for (const required of ['Para quem é', 'Você envia', 'Você recebe', 'Como combinamos', 'Limites claros', 'data-future-action="CREATE_ORDER"', 'Não promete economia antes de medi-la']) {
   if (!html.includes(required)) failures.push(`required offer content missing: ${required}`);
 }
 for (const forbidden of [/chave\s+pix/i, /pix\s+copia/i, /qr\s*code\s+pix/i]) {
