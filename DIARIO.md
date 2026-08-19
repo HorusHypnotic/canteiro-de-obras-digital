@@ -27,3 +27,12 @@
 - Correção executada: nenhuma (deploy já estava no estado canônico). Nenhuma alteração no repositório.
 - Estado público final (FACT): oferta principal "Diagnóstico Operacional de Obra" com R$ 1.297; "Triagem Diagnóstica — R$ 197" separada; CTA principal aponta para WhatsApp 55 94 99219-3129. Gate REPOSITÓRIO=ARTEFATO=DEPLOY=HTML PÚBLICO: PASS.
 - Registro de aprendizado: alegações de divergência pública devem ser verificadas por fetch HTTP com cache-busting contra o SHA do build antes de qualquer intervenção.
+
+## 19/08/2026 — Kit Comercial v1 (Missão P1)
+
+- CRIADO kit comercial do Diagnóstico Operacional de Obra fora do repo do site (não altera site, oferta, preço ou copy; nada no repo mudou exceto esta entrada).
+- 5 peças finais em `kit/` (anexo externo): Instagram Feed (01, 1080×1350), Instagram Stories (02, 1080×1920), WhatsApp Status (03, 1080×1920 com conteúdo essencial dentro das áreas seguras de ~250px), LinkedIn (04, 1080×1350) e Threads (05, 1080×1080). Todas: preço R$ 1.297 preço fixo, CTA "Solicite seu diagnóstico" → WhatsApp 55 94 99219-3129, URL canônica no rodapé das peças 01/04. Identidade herdada do site (ink/lime/laranja, estética de investigação).
+- Guia Operacional em PDF (8 páginas, `guias/GUIA_OPERACIONAL.pdf` anexo): 12 seções cobrindo o que se vende, fluxo de venda com checklist, perguntas iniciais, dados e evidências, protocolo de execução (COLETAR→ORGANIZAR→DESVIOS→CAUSAS→CLASSIFICAR FACT/INFERENCE/UNKNOWN→PRIORIZAR→RECOMENDAR), checklist de entrega, devolutiva, protocolo de travamento (48h), limites do serviço e checklist pré-publicação.
+- Copies por canal aprovadas: sem promessa de economia, triagem R$ 197 apenas como entrada distinta, sem resultados inventados, sem laudo prometido.
+- Auditoria de qualidade: PASS — dimensões exatas verificadas programaticamente, preço e CTA consistentes, URL canônica correta, identidade visual consistente, PDF dentro de 6–10 páginas.
+- REGRA APLICADA: publicar peças é experimento M3→M4; cada publicação deve ser registrada no PIPELINE/DIARIO com data e canal antes de publicar.
