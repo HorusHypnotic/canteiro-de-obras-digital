@@ -101,18 +101,69 @@ Build to Suit, Build to Rent, desenvolvimento para renda, locação e estruturas
 
 Status: horizonte estratégico já explorado conceitualmente, não competência institucional automaticamente comprovada.
 
-### L10 — Capital / serviços financeiros
-Crédito, underwriting, pagamentos, antecipação, financiamento de materiais/obra, risco, funding, eventual financeira/fintech/parcerias.
+### L10 — Payments / Finance Core / infraestrutura financeira
+Esta camada deve ser tratada como uma linha de produto e capacidade tecnológica própria, não apenas como integração auxiliar de checkout.
 
-Regra: software de pagamento, dados de compra ou inteligência de risco não concedem autoridade regulatória. Começar por inteligência e parceria; qualquer atividade regulada exige estrutura e autorização compatíveis.
+Ambição autoral já registrada historicamente: desenvolver infraestrutura de recebimento nos próprios termos, com possibilidade de evoluir de pagamentos para split payment e uma cadeia financeira/fiscal mais ampla.
 
-### L11 — Holding / alocação de capital
+Evidência histórica já existente no ecossistema inclui:
+- `BUILD PIX PAY` / Finance Core V1 e branch `feature/opera-finance-core`;
+- abstração `PaymentProviderGateway`, mantendo provedor externo atrás de adapter;
+- separação conceitual entre RECEIVE e PAYOUT;
+- integração concreta de cobrança Pix via provedor externo;
+- webhook com verificação HMAC, idempotência, mapeamento de status e atualização de `payments`;
+- funções históricas `process-payment`, `payment-webhook`, `generate-nfse`, `fiscal-flow`, `validate-fiscal-apis`;
+- pesquisa de arquitetura sobre reconciliation, ledger/settlement, adapters, connectors e invariantes.
+
+Objetivo de produto de longo prazo:
+`PAYMENT EXPERIENCE → ORCHESTRATION → RECONCILIATION → LEDGER/SETTLEMENT → SPLIT/RULES → FISCAL → RISK/FINANCING`
+
+Regra arquitetural:
+`OWN_THE_CONTRACT_BEFORE_OWNING_THE_RAIL`
+
+Podemos controlar domínio, UX, contratos internos, roteamento, reconciliação e inteligência antes de controlar diretamente trilhos financeiros regulados. Provedores externos podem ser adapters substituíveis enquanto maturidade, volume, compliance e autorização não justificarem camadas próprias.
+
+Regra de segurança institucional:
+`PAYMENT_SOFTWARE != REGULATORY_AUTHORITY`
+
+Construir gateway/orquestração/software de pagamentos não significa automaticamente poder custodiar recursos, operar como instituição de pagamento, banco ou financeira. Cada salto de autoridade exige análise jurídica/regulatória específica.
+
+### L11 — Capital / crédito / serviços financeiros
+Crédito, underwriting, antecipação, financiamento de materiais/obra, risco, funding, financeira/fintech/parcerias.
+
+A camada L10 pode produzir dados e infraestrutura úteis para L11, mas não concede automaticamente autoridade para conceder crédito ou intermediar capital.
+
+Uma pergunta estratégica central para este horizonte:
+`QUE_INFORMAÇÃO_PROPRIETÁRIA_SOBRE_OBRA_COMPRA_FORNECEDOR_E_OUTCOME_MELHORA_DECISÃO_DE_CAPITAL?`
+
+### L12 — Holding / alocação de capital
 Coordenação de empresas/veículos/ativos, propriedade intelectual, participações, SPEs e reinvestimento de capital.
 
 Status: arquitetura empresarial de horizonte; não confundir diagrama societário com holding operacional existente.
 
+## Gateway como produto potencial
+O Finance Core não deve ficar escondido dentro de outro produto se provar utilidade independente.
+
+Possíveis superfícies futuras, sujeitas a gates técnicos/regulatórios:
+- API/SDK de pagamentos e cobrança;
+- camada de orquestração multi-provedor;
+- checkout/links/Pix integráveis aos produtos OPERA e a terceiros;
+- reconciliação e trilha de auditoria;
+- split/rules engine quando legal e tecnicamente compatível;
+- integração fiscal;
+- infraestrutura especializada para fluxos do ambiente construído, fornecedores, SPEs e operações B2B.
+
+Critério para promoção a produto independente:
+1. problema externo recorrente comprovado;
+2. abstração interna usada por mais de um produto/fluxo;
+3. provider portability demonstrada;
+4. reconciliação/idempotência/evidência robustas;
+5. modelo econômico defensável;
+6. fronteira regulatória explícita;
+7. cliente externo disposto a usar/pagar.
+
 ## A escada para chegar aos grandes
-Não tentar saltar L1 → L11 por narrativa.
+Não tentar saltar L1 → L12 por narrativa.
 
 Ordem objetiva de acumulação:
 1. `EVIDENCE` — provar pequenas decisões/outcomes reais;
@@ -137,6 +188,7 @@ O mapa departamental atual deve admitir expansão por capacidade comprovada:
 - Suprimentos & Supply Intelligence;
 - Qualidade & Evidência;
 - Produto & Software;
+- Payments & Finance Core;
 - Dados & Pesquisa;
 - Desenvolvimento Imobiliário;
 - Capital & Estruturação;
@@ -150,10 +202,13 @@ P0: first cash + loops reais de compra/diagnóstico.
 P1: transformar os 48 repositórios + livros + pesquisa + casos em Knowledge/Capability Map navegável.
 P1: elevar Idea Harvester para buscar lacunas concretas da cadeia, não features aleatórias.
 P1: publicar/formalizar patrimônio autoral com cadeia de proveniência e testes, sem inflar claims.
+P1: preservar e auditar Finance Core / BUILD PIX PAY como capacidade transversal e produto potencial; não reconstruir do zero.
 P2: construir memória territorial de demanda/preço/fornecedor/outcome.
 P2: plataforma educacional mínima deve nascer de conteúdo autoral + aplicação comprovada, não de LMS genérico.
+P2: provar PaymentProviderGateway multi-fluxo e provider portability antes de ambicionar trilhos próprios.
 P3: estudar veículos de desenvolvimento/BTS/BTR/SPE como cadeia econômica completa, incluindo funding, risco, contratos, operação e saída.
-P4: somente após dados, distribuição, confiança e governança, investigar participação direta em capital/finanças/ativos regulados.
+P3: estudar a conexão payments → dados de transação → risco → financiamento sem confundir correlação operacional com underwriting validado.
+P4: somente após dados, distribuição, confiança, volume e governança, investigar participação direta em capital/finanças/ativos regulados.
 
 ## Regra Homem de Ferro
 `SCRAP_INFRASTRUCTURE_CAN_COMPOUND_IF_INTERFACES_AND_EVIDENCE_ARE_STRONG`
