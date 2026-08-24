@@ -17,8 +17,14 @@ if (offer) {
   }
   if (!html.includes('Triagem Diagnóstica') || !html.includes('R$ 197')) failures.push('triage section R$ 197 missing from public HTML');
   for (const other of contract.offers.filter((o) => o !== offer)) {
-    if (other.status !== 'TRIAGE') failures.push(`unexpected non-ACTIVE offer status: ${other.status}`);
+    if (!['TRIAGE', 'EXPERIMENTAL'].includes(other.status)) failures.push(`unexpected non-ACTIVE offer status: ${other.status}`);
   }
+}
+const evidence = contract.offers.find((offer) => offer.offer_id === 'OFFER-EVIDENCE-CHECK-PILOT-V1');
+if (!evidence || evidence.status !== 'EXPERIMENTAL' || evidence.price.amount !== 490 || evidence.price.currency !== 'BRL') failures.push('Evidence Check experimental offer BRL 490 missing');
+if (contract.offers.length !== 3) failures.push(`expected 3 catalog offers, found ${contract.offers.length}`);
+for (const value of ['03 ofertas', 'Evidence Check Piloto', 'R$ 490', 'Quero analisar uma medição', 'Antes de pagar sua próxima medição, verifique as evidências.', 'não realiza medição automática', 'não substitui responsabilidade técnica']) {
+  if (!html.includes(value)) failures.push(`catalog content missing: ${value}`);
 }
 for (const required of ['Para quem é', 'Você envia', 'Você recebe', 'Como combinamos', 'Limites claros', 'data-future-action="CREATE_ORDER"', 'Não promete economia antes de medi-la']) {
   if (!html.includes(required)) failures.push(`required offer content missing: ${required}`);
@@ -26,7 +32,7 @@ for (const required of ['Para quem é', 'Você envia', 'Você recebe', 'Como com
 for (const forbidden of [/chave\s+pix/i, /pix\s+copia/i, /qr\s*code\s+pix/i]) {
   if (forbidden.test(html)) failures.push(`forbidden payment pattern found: ${forbidden}`);
 }
-if (!css.includes('@media(max-width:520px)') || !css.includes('.active-offer')) failures.push('responsive offer CSS missing');
+if (!css.includes('@media(max-width:520px)') || !css.includes('.active-offer') || !css.includes('.offer-catalog-grid')) failures.push('responsive offer CSS missing');
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);

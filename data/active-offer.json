@@ -19,6 +19,15 @@
       "public_name": "Triagem Diagnóstica",
       "price": { "amount": 197, "currency": "BRL" },
       "cta": { "label": "Conversar sobre a triagem", "future_action": "CREATE_ORDER", "current_behavior": "AUXILIARY_CONTACT" }
+    },
+    {
+      "offer_id": "OFFER-EVIDENCE-CHECK-PILOT-V1",
+      "offer_version": "1.0.0",
+      "status": "EXPERIMENTAL",
+      "order_enabled": false,
+      "public_name": "Evidence Check Piloto",
+      "price": { "amount": 490, "currency": "BRL" },
+      "cta": { "label": "Quero analisar uma medição", "future_action": "CONTACT_WHATSAPP", "current_behavior": "PILOT_CONTACT" }
     }
   ]
 }

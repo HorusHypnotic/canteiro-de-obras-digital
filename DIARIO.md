@@ -36,3 +36,10 @@
 - Copies por canal aprovadas: sem promessa de economia, triagem R$ 197 apenas como entrada distinta, sem resultados inventados, sem laudo prometido.
 - Auditoria de qualidade: PASS — dimensões exatas verificadas programaticamente, preço e CTA consistentes, URL canônica correta, identidade visual consistente, PDF dentro de 6–10 páginas.
 - REGRA APLICADA: publicar peças é experimento M3→M4; cada publicação deve ser registrada no PIPELINE/DIARIO com data e canal antes de publicar.
+
+## 2026-08-24 — CASH-EVIDENCE-001
+
+- Catálogo de três ofertas preparado para revisão: Diagnóstico Operacional R$ 1.297, Triagem Diagnóstica R$ 197 e Evidence Check Piloto R$ 490.
+- Implantação e acompanhamento permanecem como etapas posteriores; nenhuma faixa histórica foi convertida silenciosamente em produto.
+- Evidence Check identificado explicitamente como piloto experimental, com limites técnicos e contato direto pelo WhatsApp canônico.
+- Sem deploy: publicação permanece bloqueada pelo HUMAN_GATE final da issue HorusHypnotic/opera-control-tower#10.

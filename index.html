@@ -20,7 +20,7 @@
     <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
     <nav data-nav aria-label="Navegação principal">
       <a href="#oferta-ativa">Diagnóstico</a>
-      <a href="#triagem">Triagem</a>
+      <a href="#ofertas">Ofertas</a>
       <a href="#diagnostico">Autoteste</a>
       <a href="#infraestrutura">Infraestrutura</a>
       <a href="#evidencias">Evidências</a>
@@ -211,15 +211,41 @@
       </div>
     </section>
 
-    <section class="band triage" id="triagem">
-      <div class="section-label"><span>Triagem</span> Entrada de menor custo</div>
-      <div class="triage-copy reveal">
-        <p class="kicker">Antes do diagnóstico completo</p>
-        <h2>Triagem Diagnóstica — R$ 197</h2>
-        <p>Uma leitura inicial e rastreável do contexto operacional que você informar, entregue em PDF com achados, lacunas e prioridades. <strong>Não é o Diagnóstico Operacional completo</strong>: é uma triagem para decidir se a investigação completa vale a pena para o seu caso.</p>
-        <a class="button ghost" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20entender%20a%20Triagem%20Diagn%C3%B3stica%20de%20R%24197." target="_blank" rel="noopener noreferrer">Conversar sobre a triagem <span>→</span></a>
-        <p class="triage-note">Mesmos limites da oferta principal: não é laudo, não inclui visita e pode concluir que os dados são insuficientes.</p>
+    <section class="band offer-catalog" id="ofertas" aria-labelledby="offer-catalog-title">
+      <div class="section-label"><span>03 ofertas</span> Catálogo testável</div>
+      <div class="offer-catalog-intro reveal">
+        <p class="kicker">Escolha pela decisão que precisa tomar</p>
+        <h2 id="offer-catalog-title">Três portas claras. Escopos diferentes.</h2>
+        <p>Compare a dor, a entrega e o preço antes de iniciar uma conversa. Implantação e acompanhamento são etapas posteriores, dimensionadas somente quando houver necessidade.</p>
       </div>
+
+      <div class="offer-catalog-grid">
+        <article class="offer-catalog-card offer-catalog-card-primary reveal">
+          <div class="offer-catalog-meta"><span>Investigação completa</span><strong>R$ 1.297</strong></div>
+          <h3>Diagnóstico Operacional de Obra</h3>
+          <p class="offer-catalog-pain">Minha obra está perdendo dinheiro, prazo ou controle — e eu não consigo enxergar exatamente onde.</p>
+          <p>Raio-x operacional, desvios priorizados, causas sustentadas por evidência, plano de ação e próxima decisão recomendada.</p>
+          <a class="button primary" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20Diagn%C3%B3stico%20Operacional%20de%20Obra%20de%20R%241.297." target="_blank" rel="noopener noreferrer">Quero solicitar um Diagnóstico Operacional <span>→</span></a>
+        </article>
+
+        <article class="offer-catalog-card reveal" id="triagem">
+          <div class="offer-catalog-meta"><span>Porta de entrada</span><strong>R$ 197</strong></div>
+          <h3>Triagem Diagnóstica</h3>
+          <p class="offer-catalog-pain">Tenho sinais de problema, mas ainda não sei se uma investigação completa vale a pena.</p>
+          <p>Leitura inicial e rastreável do contexto informado, em PDF, com achados, lacunas e prioridades para decidir o próximo passo.</p>
+          <a class="button ghost" href="https://wa.me/5594992193129?text=Ol%C3%A1%2C%20quero%20entender%20a%20Triagem%20Diagn%C3%B3stica%20de%20R%24197." target="_blank" rel="noopener noreferrer">Conversar sobre a triagem <span>→</span></a>
+        </article>
+
+        <article class="offer-catalog-card offer-catalog-card-pilot reveal" id="evidence-check">
+          <div class="offer-catalog-meta"><span>Piloto experimental</span><strong>R$ 490</strong></div>
+          <h3>Evidence Check Piloto</h3>
+          <p class="offer-catalog-pain">Antes de pagar sua próxima medição, verifique as evidências.</p>
+          <p>Recebemos medição, fotos e documentos existentes e organizamos estado declarado, evidências, cobertura, lacunas, divergências, pontos não verificáveis e uma conclusão estruturada.</p>
+          <a class="button ghost" href="https://wa.me/5594992193129?text=Quero%20testar%20o%20Evidence%20Check%20Piloto.%20Tenho%20uma%20medi%C3%A7%C3%A3o%20para%20analisar." target="_blank" rel="noopener noreferrer">Quero analisar uma medição <span>→</span></a>
+        </article>
+      </div>
+
+      <p class="offer-catalog-limits reveal"><strong>Limites:</strong> nenhuma das ofertas é laudo ou substitui responsável técnico. O Evidence Check é piloto experimental: não realiza medição automática, certificação, RT ou vistoria e não substitui responsabilidade técnica.</p>
     </section>
 
     <section class="band infrastructure" id="infraestrutura">
