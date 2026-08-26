@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Engenheiro de Bolso — protótipo desktop</title>
+  <desc id="desc">Seção comercial desktop com hero, demonstração sintética e bloqueio seguro por estado da energia desconhecido.</desc>
+  <style>
+    .ink{fill:#101312}.cream{fill:#f0f1ed}.paper{fill:#ffffff}.green{fill:#164d48}.lime{fill:#d7fa59}.orange{fill:#a04416}.muted{fill:#68716b}.line{stroke:#c6ccc5;stroke-width:1}.darkline{stroke:#2e3732;stroke-width:1}.label{font:700 12px Arial,sans-serif;letter-spacing:2px}.body{font:400 18px Arial,sans-serif}.small{font:400 13px Arial,sans-serif}.headline{font:800 72px Arial,sans-serif;letter-spacing:-3px}.h2{font:800 29px Arial,sans-serif;letter-spacing:-.8px}.h3{font:800 18px Arial,sans-serif}.mono{font:700 13px 'Courier New',monospace;letter-spacing:.5px}
+  </style>
+  <rect width="1440" height="1000" class="cream"/>
+  <rect width="1440" height="78" class="ink"/>
+  <rect x="60" y="25" width="29" height="29" class="lime"/>
+  <path d="M68 33h13v10l-6.5 6-6.5-6z" fill="none" stroke="#164d48" stroke-width="2"/>
+  <text x="104" y="39" class="label" fill="#d7fa59">CONSULTA DE CAMPO</text>
+  <text x="104" y="58" class="body" fill="#f0f1ed" font-weight="700">ENGENHEIRO DE BOLSO</text>
+  <text x="1380" y="45" text-anchor="end" class="small" fill="#b8c0bb">Uma leitura estruturada antes da próxima decisão</text>
+
+  <rect y="78" width="1440" height="320" class="ink"/>
+  <text x="72" y="130" class="label" fill="#d7fa59">TECNOLOGIA OPERACIONAL PARA CONSTRUÇÃO</text>
+  <text x="72" y="210" class="headline" fill="#f0f1ed">Travou numa decisão</text>
+  <text x="72" y="282" class="headline" fill="#f0f1ed">da obra?</text>
+  <text x="750" y="170" class="body" fill="#c7ccc8">Informe a pergunta e o contexto que você tem.</text>
+  <text x="750" y="198" class="body" fill="#c7ccc8">Veja o que está claro, o que falta confirmar</text>
+  <text x="750" y="226" class="body" fill="#c7ccc8">e quando a resposta segura é não concluir ainda.</text>
+  <rect x="750" y="263" width="264" height="48" class="lime"/>
+  <text x="770" y="293" class="body" fill="#101312" font-weight="700">Ver uma consulta de exemplo</text>
+  <text x="985" y="293" class="body" fill="#101312" font-weight="700">→</text>
+  <text x="750" y="337" class="small" fill="#aeb5b0">Não substitui responsável técnico nem libera trabalho.</text>
+  <text x="1368" y="356" text-anchor="end" class="small" fill="#aeb5b0">O bloqueio também é um resultado.</text>
+
+  <rect x="72" y="431" width="1296" height="50" fill="#d9ddd8"/>
+  <text x="94" y="462" class="label" fill="#a04416">DEMONSTRAÇÃO SINTÉTICA</text>
+  <text x="1346" y="462" text-anchor="end" class="small" fill="#59615d">Pré-início elétrico · contexto incompleto</text>
+
+  <text x="72" y="531" class="label" fill="#a04416">01 / PERGUNTA</text>
+  <text x="72" y="575" class="h2" fill="#101312">Podemos iniciar o serviço elétrico agora?</text>
+  <line x1="72" y1="600" x2="1368" y2="600" class="line"/>
+
+  <text x="72" y="637" class="label" fill="#a04416">02 / CONTEXTO INFORMADO</text>
+  <rect x="72" y="656" width="207" height="40" class="paper" stroke="#c6ccc5"/>
+  <text x="90" y="682" class="small" fill="#101312">Etapa: pré-início</text>
+  <rect x="294" y="656" width="242" height="40" class="paper" stroke="#c6ccc5"/>
+  <text x="312" y="682" class="small" fill="#101312">Serviço: instalação elétrica</text>
+  <rect x="551" y="656" width="215" height="40" class="paper" stroke="#c6ccc5"/>
+  <text x="569" y="682" class="small" fill="#101312">Projeto: disponível</text>
+  <rect x="781" y="656" width="252" height="40" class="paper" stroke="#c6ccc5"/>
+  <text x="799" y="682" class="small" fill="#101312">Qualificação: informada</text>
+  <rect x="1048" y="656" width="320" height="40" fill="#fff5e9" stroke="#d8b487"/>
+  <text x="1066" y="682" class="small" fill="#101312">Energia: não informado / UNKNOWN</text>
+
+  <text x="72" y="735" class="label" fill="#a04416">03 / LACUNA</text>
+  <rect x="72" y="753" width="520" height="99" fill="#fff5e9" stroke="#d8b487"/>
+  <rect x="72" y="753" width="7" height="99" class="orange"/>
+  <text x="98" y="790" class="h3" fill="#101312">Falta confirmar:</text>
+  <text x="98" y="818" class="h3" fill="#101312">estado aplicável da energia.</text>
+  <text x="98" y="840" class="small" fill="#68716b">O contexto ainda não sustenta a decisão.</text>
+
+  <text x="630" y="735" class="label" fill="#a04416">04 / RESULTADO</text>
+  <rect x="630" y="753" width="350" height="99" class="green"/>
+  <text x="656" y="790" class="h3" fill="#f0f1ed">Ainda não há informação</text>
+  <text x="656" y="818" class="h3" fill="#f0f1ed">suficiente para concluir.</text>
+  <text x="656" y="840" class="small" fill="#c5d7d4">O fluxo para em vez de preencher a lacuna.</text>
+
+  <text x="1018" y="735" class="label" fill="#a04416">05 / PRÓXIMA AÇÃO</text>
+  <rect x="1018" y="753" width="350" height="99" fill="#ffffff" stroke="#c6ccc5"/>
+  <text x="1044" y="790" class="h3" fill="#101312">Confirmar o estado</text>
+  <text x="1044" y="818" class="h3" fill="#101312">e a verificação aplicável.</text>
+  <text x="1044" y="840" class="small" fill="#68716b">A decisão e a liberação continuam humanas.</text>
+
+  <line x1="72" y1="892" x2="1368" y2="892" class="line"/>
+  <text x="72" y="923" class="label" fill="#a04416">06 / FONTE E LIMITES</text>
+  <text x="72" y="951" class="small" fill="#59615d">Fonte disponível no detalhe técnico · Não é laudo, vistoria, medição, certificação ou autorização de trabalho.</text>
+  <text x="1368" y="951" text-anchor="end" class="small" fill="#59615d">Detalhes técnicos  +</text>
+</svg>
