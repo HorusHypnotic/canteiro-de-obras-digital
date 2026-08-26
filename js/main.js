@@ -28,6 +28,48 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
 
+// Engenheiro de Bolso: eventos locais, sem conteúdo livre ou dados pessoais.
+const pocketDeviceClass = () => window.matchMedia('(max-width: 520px)').matches ? 'mobile' : 'desktop';
+const trackPocketEvent = (event, properties = {}) => {
+  const detail = { event, ...properties };
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(detail);
+  window.dispatchEvent(new CustomEvent('cod:analytics', { detail }));
+};
+
+const observePocketEvent = (selector, event, properties) => {
+  const target = document.querySelector(selector);
+  if (!target) return;
+  const eventObserver = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) return;
+    trackPocketEvent(event, typeof properties === 'function' ? properties() : properties);
+    eventObserver.disconnect();
+  }, { threshold: 0.08 });
+  eventObserver.observe(target);
+};
+
+observePocketEvent('[data-ep-section]', 'ep_section_view', () => ({ section_id: 'engenheiro-de-bolso', device_class: pocketDeviceClass() }));
+observePocketEvent('[data-ep-context]', 'ep_demo_context_view', { demo_id: 'pre-inicio-eletrico' });
+observePocketEvent('[data-ep-gap]', 'ep_demo_gap_view', { demo_id: 'pre-inicio-eletrico', gap_type: 'critical_unknown' });
+observePocketEvent('[data-ep-block]', 'ep_demo_block_view', { demo_id: 'pre-inicio-eletrico', result_type: 'not_conclusive' });
+
+document.querySelector('[data-ep-demo-start]')?.addEventListener('click', (event) => {
+  event.preventDefault();
+  const demo = document.querySelector('#engenheiro-de-bolso-demo');
+  const heading = demo?.querySelector('[data-ep-demo-heading]');
+  trackPocketEvent('ep_demo_start', { demo_id: 'pre-inicio-eletrico', device_class: pocketDeviceClass() });
+  demo?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.setTimeout(() => heading?.focus({ preventScroll: true }), 450);
+});
+
+document.querySelector('[data-ep-technical]')?.addEventListener('toggle', (event) => {
+  if (event.currentTarget.open) trackPocketEvent('ep_demo_technical_open', { demo_id: 'pre-inicio-eletrico' });
+});
+
+document.querySelector('[data-ep-field-cta]')?.addEventListener('click', () => {
+  trackPocketEvent('ep_field_cta_click', { cta_id: 'evaluate-field-query', device_class: pocketDeviceClass() });
+});
+
 const portfolioConfig = window.PORTFOLIO_CONFIG || {};
 const sessionId = sessionStorage.getItem('portfolio_session_id') || crypto.randomUUID();
 sessionStorage.setItem('portfolio_session_id', sessionId);
