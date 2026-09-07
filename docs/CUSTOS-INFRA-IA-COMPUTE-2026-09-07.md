@@ -1,7 +1,7 @@
 # CANTEIRO DE OBRAS DIGITAL — CUSTOS DE INFRA, IA E COMPUTE
 
 Data: 2026-09-07
-Status: ACTIVE COST LEDGER / BASELINE V0
+Status: ACTIVE COST LEDGER / BASELINE V1
 
 ## Objetivo
 
@@ -16,6 +16,7 @@ Tratar infraestrutura, compute, CI/CD e inteligência artificial como custos ope
 5. Não pagar IA para executar trabalho que script/terminal/runner consegue repetir deterministicamente.
 6. Quando R$1 de infraestrutura reduzir mais de R$1 de custo total comprovado, a compra vira candidata econômica, não desperdício.
 7. Toda estimativa permanece ESTIMATE até existir fatura, dashboard ou medição própria.
+8. Quando a pessoa física paga um recurso usado pela operação, o custo econômico pertence ao Canteiro mesmo que o pagamento formal esteja no CPF. Registrar separadamente `QUEM_PAGOU=PF` e `QUEM_CONSUMIU=CANTEIRO`; não classificar automaticamente como empréstimo, aporte societário ou despesa fiscal sem validação contábil/jurídica.
 
 ## Baseline observado
 
@@ -27,11 +28,43 @@ Tratar infraestrutura, compute, CI/CD e inteligência artificial como custos ope
 | Supabase Free | ACTIVE/RISK_PAUSE | R$0 no plano atual; projeto free pode pausar por inatividade | DB/control plane | disponibilidade e uso real |
 | PC local | OWNED_CAPACITY | custo marginal principal = energia + disponibilidade + manutenção | compute próprio | medir CPU/RAM, duração e kWh/job |
 | Oracle Always Free A1 | CANDIDATE | investigar/validar disponibilidade real da conta/região e capacidade concedida | compute remoto | provisionar somente após gate humano/conta |
-| Cloudflare Builds Free | CANDIDATE | investigar compatibilidade e franquia vigente antes de adoção | build complementar | teste real de workflow |
+| Cloudflare Workers Builds Free | PROVED_FOR_SMALL_PYTHON_WORKLOAD | benchmark real concluído com sucesso fora do GitHub-hosted; custo marginal observado R$0 dentro da franquia ativa | build complementar | medir CPU/RAM/arch, Node e workloads maiores |
 | Google Free compute/control plane | CANDIDATE | investigar capacidade vigente e adequação | control plane | benchmark mínimo |
 | Servidor mensal barato | FALLBACK_CANDIDATE | ainda sem contratação | compute remoto | comparar R$/1.000 min equivalentes |
 | Spot/preemptible | RESEARCH | preço variável | compute elástico | medir custo/job + taxa de interrupção |
 | Codex/IA paga | INTELLIGENCE | contabilizar assinatura/uso separadamente | inteligência | custo por missão que exigiu raciocínio |
+
+## Evidência de compute alternativo — CLOUDFLARE-BUILD-PROBE-001
+
+Data: 2026-09-07.
+
+Caminho provado: `GitHub privado -> push em branch não produtiva -> Cloudflare Git integration -> clone -> unittest Python determinístico -> sucesso`.
+
+Artefatos principais:
+
+- repositório: `HorusHypnotic/opera-control-tower`
+- PR experimental: `#87`
+- branch: `tower/cheap-compute-benchmark-001`
+- commit disparador: `87dfd2143397e37f0836a75feff4492eed9bc5d9`
+- build Cloudflare: `#1d003136`
+- comando: `cd experiments/capability_router_v0 && python -m unittest -v test_router.py`
+- resultado: 6 testes, 6 `ok`, `OK`
+- intervalo do log: aproximadamente 3,524 s
+- UI Cloudflare: build total exibido em 5 s; initializing 2 s; cloning 1 s; installing/detection 97 ms; building 427 ms
+- comando pós-build neutro: `echo "BENCHMARK_ONLY_NO_DEPLOY"`
+- nenhum `wrangler deploy` executado na branch experimental
+- produção não foi alterada
+
+Estado epistêmico: `PASS_WITH_GAPS`. Está provada a execução deste workload fora do GitHub-hosted. Ainda faltam `ARCH`, `CPU_COUNT`, `RAM_TOTAL_MB`, tempo humano confiável e testes com Node pesado/Playwright/concorrência para qualquer extrapolação de capacidade.
+
+## Financiamento atual da operação
+
+Enquanto a pessoa física bancar recursos da operação, registrar duas dimensões separadas:
+
+- `QUEM_PAGOU`: PF ou empresa;
+- `QUEM_CONSUMIU`: Canteiro, projeto específico ou uso pessoal.
+
+Métrica adicional: `APORTE_OPERACIONAL_PF = desembolso pessoal usado pela operação - reembolsos/devoluções já realizados`, mantendo essa métrica econômica separada da classificação jurídica/fiscal.
 
 ## Demanda de capacidade
 
@@ -55,6 +88,8 @@ O ecossistema possui dezenas de repositórios/projetos. Portanto o problema é d
 - custo de IA por missão
 - percentual de tarefas mecânicas executadas sem IA paga
 - disponibilidade e incidentes
+- aporte operacional PF
+- custo por projeto consumidor
 
 ## Arquitetura econômica alvo
 
@@ -81,4 +116,4 @@ Nenhuma nova mensalidade de infraestrutura deve ser contratada apenas porque um 
 
 A Canteiro deve construir um pool federado de compute capaz de crescer de milhares para dezenas de milhares de minutos equivalentes/mês sem atrelar toda a fábrica a minutos hospedados do GitHub.
 
-Estado epistêmico: HYPOTHESIS_UNDER_TEST. Não é arquitetura de produção autorizada ainda.
+Estado epistêmico: HYPOTHESIS_PARTIALLY_SUPPORTED. O primeiro workload Python pequeno já foi provado em compute alternativo; a arquitetura de produção ainda não está autorizada.
