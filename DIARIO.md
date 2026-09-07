@@ -43,3 +43,9 @@
 - Implantação e acompanhamento permanecem como etapas posteriores; nenhuma faixa histórica foi convertida silenciosamente em produto.
 - Evidence Check identificado explicitamente como piloto experimental, com limites técnicos e contato direto pelo WhatsApp canônico.
 - Sem deploy: publicação permanece bloqueada pelo HUMAN_GATE final da issue HorusHypnotic/opera-control-tower#10.
+
+## 2026-09-07 — INFRA-COST-LEDGER-001
+- Infraestrutura, compute, CI/CD e IA passam a integrar explicitamente o custo operacional da Canteiro de Obras Digital.
+- Criado `docs/CUSTOS-INFRA-IA-COMPUTE-2026-09-07.md` com baseline, métricas e gates econômicos.
+- Sinal observado: 2.000 minutos de GitHub Actions consumidos em aproximadamente 7 dias; escala do ecossistema exige tratar capacidade como problema de fábrica.
+- Hipótese em teste: pool federado de compute próprio/gratuito/barato, preservando GitHub como código/governança e IA paga para raciocínio.
